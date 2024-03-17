@@ -1,0 +1,20 @@
+<div class="header_mod">
+    <mat-toolbar class="header-toolbar" fxLayout="row"  [ngClass]="[router.isActive('/', true) || router.isActive('/home', true) ? 'header-toolbar': 'header-toolbar_change' ]">
+        <div class="site-logo-section" fxLayout="row" [routerLink]="['/']">
+            <div *ngIf="router.isActive('/', true) || router.isActive('/home', true)"><img class="site-logo" src="/assets/images/icon.jpg" /></div>
+            <div><h1 class="site-header">Trial Site</h1></div>
+        </div>
+        <span class="push-right"></span>
+        <div class="nav-btn">
+            <button mat-button>Jobs</button>
+            <button mat-button [matMenuTriggerFor]="services">Services</button>
+            <button mat-button (click)="openDialog()">Login</button>
+            <button mat-raised-button id="regBtn" [routerLink]="['/register']">Register</button>
+    </div>
+    <mat-menu #services="matMenu">
+        <button mat-menu-item [routerLink]="['/form']">Applications</button>
+        <button mat-menu-item [routerLink]="['/resource']">Resources</button>
+        <button mat-menu-item>Service 3</button>
+    </mat-menu>
+    </mat-toolbar>
+</div>

@@ -1,0 +1,86 @@
+<div id="jobform_mod" fxLayout="row">
+    <mat-card class="jobform">
+        <mat-card-content>
+        <div class="form_block" style="margin: 0 1vw">
+            <img [src]=url height="160px" width="175px" >
+        </div>
+        <div class="form_block" style="margin: 2vh 1vw;">
+            <button mat-raised-button color="primary" class="resume-btn icon-color2">Upload resume</button>
+            <button type="button" mat-raised-button (click)="fileInput.click()" style="margin: 0 1vw" class="icon-color1">Choose Image</button>
+            <input hidden (change)="onselectFile($event)" #fileInput type="file" id="file">
+        </div>
+            <div class="form_block">
+            <mat-form-field class="form-30">
+                <mat-label>First Name</mat-label>
+                <input matInput type="text" />
+            </mat-form-field>
+            <mat-form-field class="form-30">
+                <mat-label>Middle Name</mat-label>
+                <input matInput type="text" />
+            </mat-form-field>
+            <mat-form-field class="form-30">
+                <mat-label>Last Name</mat-label>
+                <input matInput type="text" />
+            </mat-form-field>
+        </div>
+        <div class="form_block">
+            <mat-form-field class="form-50" style="margin: 0 10px">
+                <mat-label >Email</mat-label>
+                <input matInput type="email" />
+            </mat-form-field>
+            <mat-form-field class="form-50" style="width: 47vw; margin: 0 0 0 17px;">
+                <mat-label>Mobile Number</mat-label>
+                <ngx-mat-intl-tel-input
+                    [preferredCountries]="['ae']"
+                    [enablePlaceholder]="true"
+                    [enableSearch]="true"
+                    id = "m_no"
+                ></ngx-mat-intl-tel-input>
+            </mat-form-field>
+            </div>
+            <div class="form_block">
+                <mat-form-field class="form-100">
+                    <mat-label>Present location</mat-label>
+                    <mat-select name="prescountry">
+                        @for (p of pays; track p) {
+                          <mat-option [value]="p.name">{{p.name}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+        </div>
+        <div class="form_block">
+            <mat-form-field class="form-100">
+                <mat-label>Preferred location</mat-label>
+                <mat-select name="prefcountries" multiple>
+                    @for (p of pays; track p) {
+                      <mat-option [value]="p.name">{{p.name}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="form_block">
+            <mat-form-field class="form-100" style="height: 30vh;">
+                <mat-label>Key skills</mat-label>
+                <textarea matInput></textarea>
+            </mat-form-field>
+        </div>
+        <div class="form_block">
+            <mat-form-field class="form-50" style="margin: 0 10px">
+                <mat-label>Expected salary range</mat-label>
+                <input
+                matInput
+                    currencyMask
+                    [options]="{ prefix: 'Dhs ', thousands: ',', decimal: '.', align: 'left', max: 100000 }"
+                />
+            </mat-form-field>
+            <mat-form-field class="form-50" style="width: 47vw; margin: 0 0 0 17px;">
+                <mat-label class="form-50">Total experience</mat-label>
+                <input matInput type="text">
+            </mat-form-field>
+        </div>
+        <div class="form_block" style="margin: 2vh 1vw;">
+            <button mat-raised-button class="icon-color1">Submit</button>
+        </div>  
+        </mat-card-content>
+    </mat-card>
+</div>

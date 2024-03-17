@@ -1,0 +1,24 @@
+<div id="login_mod">
+    <mat-card fxLayout="row">
+            <mat-card-content>
+                    <mat-card-title class="log-heading">Login</mat-card-title>
+                    <div class="form_block" style="margin-top: 7vh;">
+                    <mat-form-field class="login-field">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" [(ngModel)]="loginDetails.email"/>
+                    </mat-form-field>
+                </div>
+                <div class="form_block">
+                    <mat-form-field class="login-field">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" [(ngModel)]="loginDetails.password"/>
+                    </mat-form-field>
+                </div>
+                <div style="margin-bottom: 15vh; justify-content: center;" fxLayout="row">
+                    <button mat-raised-button class="icon-color2" style="margin: 0 1vw;" [routerLink]="['/login']" matDialogClose>Open page</button>
+                    <button mat-raised-button class="icon-color1">Submit</button>
+                </div>
+            </mat-card-content>
+            <span class="card_end"></span>
+    </mat-card>
+    </div>

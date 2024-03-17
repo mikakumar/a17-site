@@ -1,0 +1,25 @@
+.res_card{
+    cursor: pointer;
+}
+.res_card_layout{
+    justify-content: space-between;
+}
+
+.card_style{
+    width:30vw;
+    height:40vh;
+    border-radius: 10px;
+    box-shadow: 5px;
+}
+
+.img-wrapper{
+    margin: -20px -16px;
+    max-height: 25vh;
+    max-width:40vw;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.text_wrapper{
+    margin: 3vh 0 0 0;
+}

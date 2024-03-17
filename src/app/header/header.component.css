@@ -1,0 +1,35 @@
+.header-toolbar{
+    background-color: white;
+    color: black
+}
+
+.header-toolbar_change{
+    background-color: rgb(240, 240, 240);
+    color: black;
+    border: 1px rgb(193, 247, 255) solid;
+}
+.site-logo-section{
+    cursor: pointer;
+}
+
+.site-logo{
+    height: 50px;
+    width: 50px;
+}
+
+.site-header{
+    margin: 2vh;
+    color: black; 
+    font-weight: 600;
+}
+
+.push-right{
+    flex: 1 1 auto;
+}
+
+
+#regBtn{
+    background-color: rgb(12, 12, 168);
+    color: white;
+    margin: 1vh;
+}

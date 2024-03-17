@@ -1,0 +1,27 @@
+.log-heading{
+    margin-top: 4vh;
+    text-align: center;
+    color: black; 
+    font-size: 34px; 
+    font-weight: 700; 
+    margin-top: 6vh; 
+}
+
+.login-field{
+    width: 30vw;
+    margin-left: 1vw;
+}
+
+.card_end{
+    margin-bottom: 20vh;
+}
+
+.icon-color1{
+    background-color: rgb(12, 12, 168);
+    color: white;
+}
+
+.icon-color2{
+    background-color: rgb(3, 198, 195);
+    color: white;
+}
